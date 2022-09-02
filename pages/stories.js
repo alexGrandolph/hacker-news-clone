@@ -1,10 +1,4 @@
-// https://node-hnapi.herokuapp.com
-
-// / (Top) -> /new
-// /new (New) -> /newest
-// /ask (Ask) -> /ask
-// /show (Show) -> /show 
-// const BASE_URL = 'https://node-hnapi.herokuapp.com'
+import Story from '../components/Story.js';
 import view from '../utils/view.js';
 
 export default async function Stories(path) {
@@ -13,7 +7,7 @@ export default async function Stories(path) {
 
 
   view.innerHTML = `<div>
-    ${hasStories ? stories.map(story => JSON.stringify(story)) : 'No Stories Could Be Found'}
+    ${hasStories ? stories.map(story => Story(story)).join('') : 'No Stories Could Be Found'}
   
   </div>`;
 }
