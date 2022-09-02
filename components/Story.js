@@ -4,6 +4,6 @@ export default function Story(story) {
   console.log(story)
   return `
   <div class="story">
-    <span><span>
+    <span>${story.index}<span>
   </div>`
-}
+} 

@@ -7,7 +7,9 @@ export default async function Stories(path) {
 
 
   view.innerHTML = `<div>
-    ${hasStories ? stories.map(story => Story(story)).join('') : 'No Stories Could Be Found'}
+    ${hasStories ? stories.map((story, i) => 
+      Story({ ...story, index: i + 1 })).join('') 
+      : 'No Stories Could Be Found'}
   
   </div>`;
 }
