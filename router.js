@@ -1,5 +1,5 @@
 import Stories from '/pages/stories.js'
-
+import Item from '/pages/item.js'
 const router = new Navigo(null, true, '#')  //arguments to use 'hash' router
 
 export default class RouterHandler {
@@ -14,6 +14,7 @@ export default class RouterHandler {
       { path: '/new', page: Stories },
       { path: '/ask', page: Stories },
       { path: '/show', page: Stories },
+      { path: '/item', page: Item}
     ];
     routes.forEach(({ path, page }) => {
       router.on(path, () => {
