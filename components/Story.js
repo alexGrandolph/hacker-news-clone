@@ -6,7 +6,7 @@ export default function Story(story) {
   <div class="story">
     
   <div>
-      <span class="grey">${story.index}<span>
+      <span class="grey">${ story.index || "" }<span>
       <span class="upvote">▲<span>
       <a href="${story.url}">${story.title}</a>
       <span>(${story.domain})</span>
